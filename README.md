@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
+# IntelliTools - AI SaaS Platform
 
-## Project info
+A modern, feature-rich AI SaaS platform built with React, TypeScript, and Tailwind CSS. Features a beautiful UI with full RTL/LTR support for international audiences.
 
-**URL**: https://lovable.dev/projects/3ad51ee1-7ff5-4a77-aca8-6fae6056ab81
+## ✨ Features
 
-## How can I edit this code?
+- 🌐 **RTL/LTR Toggle** - Switch between right-to-left and left-to-right layouts
+- 🎨 **Modern UI** - Built with shadcn/ui components and Tailwind CSS
+- 📱 **Responsive Design** - Works perfectly on all devices
+- 🚀 **Multiple Pages** - Home, About, Pricing, Blog, Portfolio, FAQ, Contact, Dashboards
+- 🔐 **Authentication** - Login and Register pages
+- 👤 **User & Admin Dashboards** - Separate dashboard views
+- ⚡ **Fast Performance** - Built with Vite for lightning-fast development
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Icons:** Lucide React
+- **Routing:** React Router
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3ad51ee1-7ff5-4a77-aca8-6fae6056ab81) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+### Installation
 
 Follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/venkat2005code/ai.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd ai
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/        # Reusable UI components
+│   ├── ui/           # shadcn/ui components
+│   ├── admin/        # Admin dashboard components
+│   ├── auth/         # Authentication components
+│   ├── blog/         # Blog page components
+│   ├── contact/      # Contact page components
+│   ├── faq/          # FAQ page components
+│   ├── portfolio/    # Portfolio page components
+│   └── pricing/      # Pricing page components
+├── pages/            # Page components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+└── assets/           # Images and static assets
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 RTL/LTR Support
 
-## What technologies are used for this project?
+Click the 🌐 globe button in the navigation bar to toggle between LTR (Left-to-Right) and RTL (Right-to-Left) layouts. Perfect for supporting international audiences.
 
-This project is built with:
+## 📄 Available Pages
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Home** - Two different homepage layouts
+- **About** - Company information and team
+- **Pricing** - Pricing plans and feature comparison
+- **Blog** - Articles and insights
+- **Portfolio** - Project showcase and case studies
+- **FAQ** - Frequently asked questions
+- **Contact** - Contact form and office locations
+- **Dashboard** - User dashboard
+- **User Dashboard** - Enhanced user interface
+- **Admin Dashboard** - Admin control panel
+- **Login/Register** - Authentication pages
 
-## How can I deploy this project?
+## 🚀 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/3ad51ee1-7ff5-4a77-aca8-6fae6056ab81) and click on Share -> Publish.
+### Vercel (Recommended)
 
-## Can I connect a custom domain to my Lovable project?
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Vercel will auto-detect Vite and deploy
 
-Yes, you can!
+### Netlify
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Push your code to GitHub
+2. Connect your repository on [Netlify](https://netlify.com)
+3. Build command: `npm run build`
+4. Publish directory: `dist`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📝 License
+
+This project is open source and available under the MIT License.
