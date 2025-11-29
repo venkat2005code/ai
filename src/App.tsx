@@ -37,7 +37,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/ai">
           <Routes>
             <Route path="/" element={<Index isRTL={isRTL} setIsRTL={setIsRTL} />} />
             <Route path="/home-2" element={<Home2 isRTL={isRTL} setIsRTL={setIsRTL} />} />
