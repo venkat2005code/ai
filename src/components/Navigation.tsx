@@ -33,7 +33,7 @@ const Navigation = ({ isRTL, setIsRTL }) => {
             <span className="font-bold text-xl text-foreground">IntelliTools</span>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - Center */}
           <div className="hidden md:flex items-center gap-8">
             <DropdownMenu>
               <DropdownMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center gap-1">
@@ -74,7 +74,7 @@ const Navigation = ({ isRTL, setIsRTL }) => {
             </DropdownMenu>
           </div>
 
-          {/* Right Actions */}
+          {/* Right Actions - Desktop */}
           <div className="hidden md:flex items-center gap-4">
             <button
               type="button"
@@ -82,7 +82,7 @@ const Navigation = ({ isRTL, setIsRTL }) => {
               className="flex items-center gap-2 px-3 py-1 rounded-full bg-muted text-foreground text-sm font-medium shadow hover:bg-accent transition-colors"
               aria-label="Toggle layout direction"
             >
-              <span role="img" aria-label="globe">🌐</span>
+              <Globe className="h-4 w-4" />
               <span>{isRTL ? "RTL" : "LTR"}</span>
             </button>
             <Button variant="ghost" asChild>
@@ -93,15 +93,24 @@ const Navigation = ({ isRTL, setIsRTL }) => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
+          {/* Mobile Actions - Globe + Menu Button */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setIsRTL((v) => !v)}
+              className="flex items-center justify-center p-2 rounded-lg bg-muted text-foreground hover:bg-accent transition-colors"
+              aria-label="Toggle layout direction"
+            >
+              <Globe className="h-5 w-5" />
+            </button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <Menu className="h-6 w-6" />
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
