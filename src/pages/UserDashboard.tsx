@@ -22,7 +22,9 @@ import {
   Zap,
   CreditCard,
   ArrowRight,
-  Circle
+  Circle,
+  Menu,
+  X
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -35,6 +37,7 @@ import {
 
 const UserDashboard = ({ isRTL, setIsRTL }) => {
   const [activePage, setActivePage] = useState("dashboard");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const sidebarItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
@@ -92,15 +95,35 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
 
   return (
     <div className="flex h-screen bg-secondary/20">
+      {/* Mobile Sidebar Overlay */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Left Sidebar */}
-      <aside className="w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed h-full z-40">
+      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed h-full z-50 transition-transform duration-300 lg:translate-x-0 ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      } ${isRTL ? 'right-0 lg:right-auto' : 'left-0'}`}>
         {/* Logo Area */}
         <div className="p-6 border-b border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-highlight flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AI</span>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-highlight flex items-center justify-center">
+                <span className="text-white font-bold text-lg">AI</span>
+              </div>
+              <span className="font-bold text-xl">IntelliTools</span>
             </div>
-            <span className="font-bold text-xl">IntelliTools</span>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden text-white hover:bg-white/10"
+              onClick={() => setSidebarOpen(false)}
+            >
+              <X className="w-5 h-5" />
+            </Button>
           </div>
         </div>
 
@@ -142,15 +165,32 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 ml-64 overflow-y-auto">
+      <main className={`flex-1 overflow-y-auto ${isRTL ? 'lg:mr-64' : 'lg:ml-64'}`}>
         {/* Top Bar */}
         <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-30">
-          <div className="px-8 py-4 flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-foreground">User Dashboard</h1>
-            
+          <div className="px-4 lg:px-8 py-4 flex items-center justify-between">
             <div className="flex items-center gap-4">
-              {/* Language Icon */}
-              <Button variant="ghost" size="icon" className="rounded-lg">
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden rounded-lg"
+                onClick={() => setSidebarOpen(true)}
+              >
+                <Menu className="w-5 h-5" />
+              </Button>
+              <h1 className="text-xl lg:text-2xl font-bold text-foreground">User Dashboard</h1>
+            </div>
+            
+            <div className="flex items-center gap-2 lg:gap-4">
+              {/* Language/RTL Toggle */}
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="rounded-lg"
+                onClick={() => setIsRTL((v) => !v)}
+                aria-label="Toggle layout direction"
+              >
                 <Globe className="w-5 h-5" />
               </Button>
 
@@ -197,18 +237,18 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
         </header>
 
         {/* Page Content */}
-        <div className="p-8 space-y-6">
+        <div className="p-4 lg:p-8 space-y-6">
           {/* Welcome / Summary Banner */}
-          <Card className="border-l-4 border-l-primary overflow-hidden">
-            <CardContent className="p-6">
+          <Card className={`overflow-hidden ${isRTL ? 'border-r-4 border-r-primary' : 'border-l-4 border-l-primary'}`}>
+            <CardContent className="p-4 lg:p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="flex-1">
-                  <h2 className="text-3xl font-bold text-foreground mb-2">Welcome back!</h2>
-                  <p className="text-muted-foreground">
+                  <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-2">Welcome back!</h2>
+                  <p className="text-sm lg:text-base text-muted-foreground">
                     You have 3 active projects and 12 pending tasks. Stay productive and keep moving forward.
                   </p>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex gap-3 lg:gap-6">
                   <div className="text-center px-6 py-4 bg-primary/5 rounded-lg border border-primary/10">
                     <div className="text-3xl font-bold text-primary mb-1">8</div>
                     <div className="text-xs text-muted-foreground uppercase tracking-wide">Active Projects</div>
