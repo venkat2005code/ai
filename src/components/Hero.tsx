@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in-up py-12 lg:py-0">
+          <div className="text-center lg:text-start space-y-6 lg:space-y-8 animate-fade-in-up py-12 lg:py-0">
             <Badge className="bg-white/20 text-white border-white/30 hover:bg-white/30 text-sm px-4 py-1 inline-flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               Trusted by 500+ Companies Worldwide
@@ -32,7 +32,7 @@ const Hero = () => {
             </p>
             
             {/* Key Benefits */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-white/90 justify-center lg:justify-start text-sm sm:text-base">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-white/90 justify-center text-sm sm:text-base">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
                 <span>No credit card required</span>
@@ -47,7 +47,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base sm:text-lg px-6 sm:px-8 py-6 shadow-lg transition-all hover:shadow-xl">
                 Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
 
             {/* Social Proof Stats */}
-            <div className="flex flex-wrap gap-6 sm:gap-8 justify-center lg:justify-start pt-4">
+            <div className="flex flex-wrap gap-6 sm:gap-8 justify-center pt-4">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
                   <Users className="w-5 h-5 text-white" />

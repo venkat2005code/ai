@@ -120,13 +120,13 @@ const Navigation = ({ isRTL, setIsRTL }) => {
               <div className="text-sm font-medium text-muted-foreground px-2">Home</div>
               <Link
                 to="/"
-                className="block py-2 pl-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="block py-2 ps-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Home 1
               </Link>
               <Link
                 to="/home-2"
-                className="block py-2 pl-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="block py-2 ps-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Home 2
               </Link>
@@ -144,13 +144,13 @@ const Navigation = ({ isRTL, setIsRTL }) => {
               <div className="text-sm font-medium text-muted-foreground px-2">Dashboard</div>
               <Link
                 to="/user-dashboard"
-                className="block py-2 pl-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="block py-2 ps-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 User
               </Link>
               <Link
                 to="/dashboard/admin"
-                className="block py-2 pl-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="block py-2 ps-6 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 Admin
               </Link>
