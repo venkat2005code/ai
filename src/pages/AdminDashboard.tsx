@@ -26,7 +26,7 @@ const AdminDashboard = () => {
       <AdminSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Main Content */}
-      <div className="flex-1 lg:ml-72">
+      <div className="flex-1 lg:ms-72">
         {/* Top Bar */}
         <AdminTopBar onMenuClick={() => setSidebarOpen(true)} />
 

@@ -21,7 +21,7 @@ const RecentActivitySection = () => {
           {activities.map((activity, index) => (
             <div 
               key={index}
-              className="flex items-center gap-4 p-5 bg-slate-50 hover:bg-slate-100 transition-all duration-200 border-l-4 border-primary"
+              className="flex items-center gap-4 p-5 bg-slate-50 hover:bg-slate-100 transition-all duration-200 border-s-4 border-primary"
             >
               <div className={`w-12 h-12 ${activity.color} flex items-center justify-center flex-shrink-0`}>
                 <activity.icon className="w-6 h-6" strokeWidth={2.5} />

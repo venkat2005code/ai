@@ -104,9 +104,9 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
       )}
 
       {/* Left Sidebar */}
-      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed h-full z-50 transition-transform duration-300 lg:translate-x-0 ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      } ${isRTL ? 'right-0 lg:right-auto' : 'left-0'}`}>
+      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed h-full z-50 transition-transform duration-300 lg:translate-x-0 start-0 ${
+        sidebarOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
+      }`}>
         {/* Logo Area */}
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center justify-between gap-3">
@@ -165,7 +165,7 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
       </aside>
 
       {/* Main Content Area */}
-      <main className={`flex-1 overflow-y-auto ${isRTL ? 'lg:mr-64' : 'lg:ml-64'}`}>
+      <main className="flex-1 overflow-y-auto lg:ms-64">
         {/* Top Bar */}
         <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-30">
           <div className="px-4 lg:px-8 py-4 flex items-center justify-between">
@@ -213,20 +213,20 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                 <DropdownMenuContent align="end" className="w-48 bg-background border-border">
                   <DropdownMenuItem asChild>
                     <Link to="#" className="cursor-pointer">
-                      <User className="w-4 h-4 mr-2" />
+                      <User className="w-4 h-4 me-2" />
                       Profile
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link to="#" className="cursor-pointer">
-                      <Settings className="w-4 h-4 mr-2" />
+                      <Settings className="w-4 h-4 me-2" />
                       Settings
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
                     <Link to="/login" className="cursor-pointer text-red-600">
-                      <LogOut className="w-4 h-4 mr-2" />
+                      <LogOut className="w-4 h-4 me-2" />
                       Logout
                     </Link>
                   </DropdownMenuItem>
@@ -239,7 +239,7 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
         {/* Page Content */}
         <div className="p-4 lg:p-8 space-y-6">
           {/* Welcome / Summary Banner */}
-          <Card className={`overflow-hidden ${isRTL ? 'border-r-4 border-r-primary' : 'border-l-4 border-l-primary'}`}>
+          <Card className="overflow-hidden border-s-4 border-s-primary">
             <CardContent className="p-4 lg:p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div className="flex-1">
@@ -393,19 +393,19 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                 <CardContent className="space-y-3">
                   <Button className="w-full justify-start bg-primary hover:bg-primary/90 rounded-lg" asChild>
                     <Link to="#">
-                      <Plus className="w-4 h-4 mr-2" />
+                      <Plus className="w-4 h-4 me-2" />
                       Create New
                     </Link>
                   </Button>
                   <Button variant="outline" className="w-full justify-start rounded-lg" asChild>
                     <Link to="#">
-                      <List className="w-4 h-4 mr-2" />
+                      <List className="w-4 h-4 me-2" />
                       View All Items
                     </Link>
                   </Button>
                   <Button variant="outline" className="w-full justify-start rounded-lg" asChild>
                     <Link to="#">
-                      <Settings className="w-4 h-4 mr-2" />
+                      <Settings className="w-4 h-4 me-2" />
                       Open Settings
                     </Link>
                   </Button>
@@ -423,7 +423,7 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                   </p>
                   <Button className="w-full bg-accent hover:bg-accent/90 rounded-lg" asChild>
                     <Link to="/contact">
-                      <MessageSquare className="w-4 h-4 mr-2" />
+                      <MessageSquare className="w-4 h-4 me-2" />
                       Contact Support
                     </Link>
                   </Button>
@@ -479,7 +479,7 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                   <Button variant="ghost" className="justify-start text-primary hover:text-primary/80 p-0 h-auto mt-4" asChild>
                     <Link to="/pricing">
                       Manage billing
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ms-2" />
                     </Link>
                   </Button>
                 </div>
