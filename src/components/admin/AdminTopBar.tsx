@@ -1,4 +1,4 @@
-import { Bell, Globe, ChevronDown, User, Settings, LogOut } from "lucide-react";
+import { Bell, Globe, ChevronDown, User, Settings, LogOut, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,17 +9,31 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
 
-const AdminTopBar = () => {
+interface AdminTopBarProps {
+  onMenuClick: () => void;
+}
+
+const AdminTopBar = ({ onMenuClick }: AdminTopBarProps) => {
   return (
-    <header className="h-20 bg-white border-b-2 border-slate-200 sticky top-0 z-30 shadow-sm">
-      <div className="h-full px-8 flex items-center justify-between">
-        {/* Left: Title + Breadcrumb */}
-        <div>
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight">Admin Dashboard</h1>
-          <div className="flex items-center gap-2 mt-0.5">
-            <span className="text-xs font-bold text-slate-400 uppercase">Home</span>
-            <span className="text-xs text-slate-300">/</span>
-            <span className="text-xs font-bold text-primary uppercase">Dashboard</span>
+    <header className="h-16 lg:h-20 bg-white border-b-2 border-slate-200 sticky top-0 z-30 shadow-sm">
+      <div className="h-full px-4 lg:px-8 flex items-center justify-between">
+        {/* Left: Menu Button (Mobile) + Title + Breadcrumb */}
+        <div className="flex items-center gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="lg:hidden w-10 h-10"
+            onClick={onMenuClick}
+          >
+            <Menu className="w-6 h-6" />
+          </Button>
+          <div>
+            <h1 className="text-xl lg:text-3xl font-black text-slate-900 tracking-tight">Admin Dashboard</h1>
+            <div className="hidden sm:flex items-center gap-2 mt-0.5">
+              <span className="text-xs font-bold text-slate-400 uppercase">Home</span>
+              <span className="text-xs text-slate-300">/</span>
+              <span className="text-xs font-bold text-primary uppercase">Dashboard</span>
+            </div>
           </div>
         </div>
 
