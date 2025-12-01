@@ -11,8 +11,10 @@ import teamMember4 from "@/assets/team-member-4.jpg";
 
 const About = ({ isRTL, setIsRTL }) => {
   const stats = [
-    { number: "500+", label: "Clients Worldwide" },
-    { number: "50+", label: "Team Members" },
+    { number: "500+", label: "Clients Worldwide", icon: Users },
+    { number: "50+", label: "Team Members", icon: Users },
+    { number: "30+", label: "Countries Served", icon: Target },
+    { number: "98%", label: "Customer Satisfaction", icon: Star },
   ];
 
   const timeline = [
@@ -93,13 +95,13 @@ const About = ({ isRTL, setIsRTL }) => {
       <Navigation isRTL={isRTL} setIsRTL={setIsRTL} />
       
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-highlight/20 to-secondary">
-        <div className="container mx-auto px-4">
+      <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-highlight/20 to-secondary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6">
               About IntelliTools
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We're on a mission to democratize artificial intelligence and make cutting-edge AI tools accessible to businesses of all sizes.
             </p>
           </div>
@@ -107,33 +109,39 @@ const About = ({ isRTL, setIsRTL }) => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-16 sm:py-20 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in-up">
-              <h2 className="text-4xl font-bold text-foreground mb-6">Our Story</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Founded in 2018, IntelliTools began with a simple vision: to make artificial intelligence accessible to businesses of all sizes. What started as a small team of AI enthusiasts has grown into a leading provider of AI-powered solutions.
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">Our Story</h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+                Founded in 2018, IntelliTools began with a simple vision: to make artificial intelligence accessible to businesses of all sizes. What started as a small team of 5 AI enthusiasts has grown into a leading provider of AI-powered solutions serving over 500 companies worldwide.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our journey began when our founders recognized the gap between enterprise-level AI solutions and what small to medium businesses could afford. They set out to bridge that gap by creating powerful, yet affordable AI tools.
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
+                Our journey began when our founders recognized the gap between enterprise-level AI solutions and what small to medium businesses could afford. They set out to bridge that gap by creating powerful, yet affordable AI tools that deliver real business value.
               </p>
               
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </div>
-                ))}
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                {stats.map((stat, index) => {
+                  const IconComponent = stat.icon;
+                  return (
+                    <Card key={index} className="animate-fade-in-up border-primary/20" style={{ animationDelay: `${index * 0.1}s` }}>
+                      <CardContent className="p-4 sm:p-6">
+                        <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-2" />
+                        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-1">{stat.number}</div>
+                        <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             </div>
             
-            <div className="animate-fade-in-up">
+            <div className="animate-fade-in-up order-first lg:order-last">
               <img 
                 src={ourStory} 
                 alt="Our Story" 
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-xl w-full h-auto"
               />
             </div>
           </div>
