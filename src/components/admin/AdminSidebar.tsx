@@ -32,7 +32,7 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
   ];
 
   return (
-    <aside className={`w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 fixed inset-y-0 start-0 border-e border-slate-700/50 shadow-2xl z-50 transition-transform duration-300 lg:translate-x-0 ${
+    <aside className={`w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 fixed inset-y-0 start-0 border-e border-slate-700/50 shadow-2xl z-50 transition-transform duration-300 lg:translate-x-0 flex flex-col ${
       isOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
     }`}>
       {/* Logo Section */}
@@ -70,12 +70,12 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
       </div>
 
       {/* Navigation */}
-      <nav className="p-4 space-y-2">
+      <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
         {navItems.map((item) => (
           <button
             key={item.id}
             onClick={() => setActiveItem(item.id)}
-            className={`w-full flex items-center text-start gap-4 px-5 py-3.5 transition-all duration-200 ${
+            className={`w-full flex items-center text-start gap-4 px-5 py-3.5 rounded-lg transition-all duration-200 ${
               activeItem === item.id
                 ? "bg-primary text-white shadow-lg shadow-primary/20"
                 : "text-slate-300 hover:text-white hover:bg-slate-800/50"
@@ -88,7 +88,7 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
       </nav>
 
       {/* Footer */}
-      <div className="absolute bottom-0 inset-x-0 p-4 border-t border-slate-700/50">
+      <div className="p-4 border-t border-slate-700/50 flex-shrink-0">
         <div className="text-center">
           <p className="text-slate-500 text-xs font-semibold">v3.2.1</p>
         </div>
