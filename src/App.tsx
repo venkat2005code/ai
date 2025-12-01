@@ -49,7 +49,7 @@ const App = () => {
             <Route path="/contact" element={<Contact isRTL={isRTL} setIsRTL={setIsRTL} />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/dashboard/admin" element={<AdminDashboard />} />
+            <Route path="/dashboard/admin" element={<AdminDashboard isRTL={isRTL} setIsRTL={setIsRTL} />} />
             <Route path="/user-dashboard" element={<UserDashboard isRTL={isRTL} setIsRTL={setIsRTL} />} />
             <Route path="/dashboard" element={<Dashboard isRTL={isRTL} setIsRTL={setIsRTL} />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

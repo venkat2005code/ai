@@ -11,9 +11,10 @@ import { Link } from "react-router-dom";
 
 interface AdminTopBarProps {
   onMenuClick: () => void;
+  setIsRTL: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const AdminTopBar = ({ onMenuClick }: AdminTopBarProps) => {
+const AdminTopBar = ({ onMenuClick, setIsRTL }: AdminTopBarProps) => {
   return (
     <header className="h-16 lg:h-20 bg-white border-b-2 border-slate-200 sticky top-0 z-30 shadow-sm">
       <div className="h-full px-4 lg:px-8 flex items-center justify-between">
@@ -44,6 +45,8 @@ const AdminTopBar = ({ onMenuClick }: AdminTopBarProps) => {
             variant="ghost" 
             size="icon" 
             className="w-10 h-10 bg-slate-100 hover:bg-slate-200 transition-colors"
+            onClick={() => setIsRTL(prev => !prev)}
+            aria-label="Toggle layout direction"
           >
             <Globe className="w-5 h-5 text-slate-700" strokeWidth={2.5} />
           </Button>

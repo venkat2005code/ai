@@ -9,7 +9,12 @@ import QuickActionsGrid from "@/components/admin/QuickActionsGrid";
 import SystemStatusSection from "@/components/admin/SystemStatusSection";
 import RecentProjectsTable from "@/components/admin/RecentProjectsTable";
 
-const AdminDashboard = () => {
+interface AdminDashboardProps {
+  isRTL: boolean;
+  setIsRTL: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -28,7 +33,7 @@ const AdminDashboard = () => {
       {/* Main Content */}
       <div className="flex-1 lg:ms-72">
         {/* Top Bar */}
-        <AdminTopBar onMenuClick={() => setSidebarOpen(true)} />
+        <AdminTopBar onMenuClick={() => setSidebarOpen(true)} setIsRTL={setIsRTL} />
 
         {/* Page Content */}
         <main className="p-4 lg:p-8 space-y-6 lg:space-y-8">
