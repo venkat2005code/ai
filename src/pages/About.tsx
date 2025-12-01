@@ -221,12 +221,12 @@ const About = ({ isRTL, setIsRTL }) => {
                     <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-primary/30 border border-border">
                       <CardContent className="p-6">
                         <div className={`inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-gradient-to-r from-primary/10 to-highlight/10 border border-primary/20 mb-4`}>
-                          <span className="text-sm font-bold text-primary\">{item.year}</span>
+                          <span className="text-sm font-bold text-primary">{item.year}</span>
                         </div>
-                        <h3 className=\"text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors\">
+                        <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                           {item.title}
                         </h3>
-                        <p className=\"text-muted-foreground leading-relaxed\">
+                        <p className="text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </CardContent>
