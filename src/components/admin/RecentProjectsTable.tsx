@@ -37,11 +37,11 @@ const RecentProjectsTable = () => {
         <table className="w-full">
           <thead>
             <tr className="bg-slate-900 border-b-2 border-slate-700">
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">ID</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Project Name</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Client</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Progress</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Status</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">ID</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Project Name</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Client</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Progress</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Status</th>
             </tr>
           </thead>
           <tbody className="divide-y-2 divide-slate-200">

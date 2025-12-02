@@ -33,12 +33,12 @@ const ManageUsersTable = () => {
         <table className="w-full">
           <thead>
             <tr className="bg-slate-900 border-b-2 border-slate-700">
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">ID</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Name</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Email</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Role</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Status</th>
-              <th className="px-7 py-4 text-left text-xs font-black text-white uppercase tracking-wider">Actions</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">ID</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Name</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Email</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Role</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Status</th>
+              <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y-2 divide-slate-200">
