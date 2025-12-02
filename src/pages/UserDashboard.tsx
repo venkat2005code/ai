@@ -104,9 +104,9 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
       )}
 
       {/* Left Sidebar */}
-      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed inset-y-0 start-0 z-50 transition-transform duration-300 lg:translate-x-0 ${
-        sidebarOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
-      }`}>
+      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed inset-y-0 start-0 z-50 transition-transform duration-300 ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      } lg:translate-x-0`}>
         {/* Logo Area */}
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center justify-between gap-3">
