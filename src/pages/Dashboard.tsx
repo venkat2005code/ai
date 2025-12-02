@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -180,7 +180,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
               {/* Recent Activity */}
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Recent Activity</CardTitle>
+                  <h2 className="text-2xl font-semibold">Recent Activity</h2>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -233,7 +233,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
               {/* Quick Actions */}
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Quick Actions</CardTitle>
+                  <h2 className="text-2xl font-semibold">Quick Actions</h2>
                 </CardHeader>
                 <CardContent>
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -260,7 +260,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
               {/* Account Overview */}
               <Card className="border-border bg-gradient-to-br from-primary/5 to-highlight/5">
                 <CardHeader>
-                  <CardTitle className="text-xl">Account Overview</CardTitle>
+                  <h2 className="text-xl font-semibold">Account Overview</h2>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
@@ -308,7 +308,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
               {/* Shortcuts */}
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="text-xl">Shortcuts</CardTitle>
+                  <h2 className="text-xl font-semibold">Shortcuts</h2>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
