@@ -33,7 +33,7 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
 
   return (
     <aside className={`w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 fixed inset-y-0 start-0 border-e border-slate-700/50 shadow-2xl z-50 transition-transform duration-300 flex flex-col ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
+      isOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
     } lg:translate-x-0`}>
       {/* Logo Section */}
       <div className="h-20 flex items-center justify-between px-6 border-b border-slate-700/50">
