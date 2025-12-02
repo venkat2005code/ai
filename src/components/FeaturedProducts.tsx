@@ -86,7 +86,7 @@ const FeaturedProducts = () => {
                   </div>
                   <Button variant="ghost" className="text-primary hover:text-primary/80 group/btn p-0 h-auto">
                     Learn More 
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                    <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                   </Button>
                 </CardContent>
               </Card>

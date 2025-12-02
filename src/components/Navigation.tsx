@@ -26,12 +26,12 @@ const Navigation = ({ isRTL, setIsRTL }) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-highlight flex items-center justify-center">
+          <Link to="/" aria-label="Go to home" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-highlight flex items-center justify-center transition-transform group-hover:scale-105">
               <span className="text-primary-foreground font-bold text-lg">AI</span>
             </div>
             <span className="font-bold text-xl text-foreground">IntelliTools</span>
-          </div>
+          </Link>
 
           {/* Desktop Menu - Center */}
           <div className="hidden md:flex items-center gap-8">

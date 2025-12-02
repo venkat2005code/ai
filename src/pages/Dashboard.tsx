@@ -136,13 +136,13 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
                     <div className="hidden md:flex items-center gap-2">
                       <Button variant="outline" size="sm" asChild>
                         <Link to="#">
-                          <Settings className="w-4 h-4 mr-2" />
+                          <Settings className="w-4 h-4 me-2" />
                           Manage Account
                         </Link>
                       </Button>
                       <Button variant="ghost" size="sm" asChild>
                         <Link to="/login">
-                          <LogOut className="w-4 h-4 mr-2" />
+                          <LogOut className="w-4 h-4 me-2" />
                           Log out
                         </Link>
                       </Button>
@@ -245,7 +245,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
                         asChild
                       >
                         <Link to={action.href}>
-                          <action.icon className="w-5 h-5 mr-3 text-primary" />
+                          <action.icon className="w-5 h-5 me-3 text-primary" />
                           <span className="font-medium">{action.label}</span>
                         </Link>
                       </Button>
@@ -299,7 +299,7 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
                   <Button variant="ghost" className="w-full justify-between mt-4 text-primary hover:text-primary/80" asChild>
                     <Link to="/pricing">
                       View full billing
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 ms-2" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -350,13 +350,13 @@ const Dashboard = ({ isRTL, setIsRTL }) => {
           <div className="md:hidden mt-8 flex gap-3">
             <Button variant="outline" className="flex-1" asChild>
               <Link to="#">
-                <Settings className="w-4 h-4 mr-2" />
+                <Settings className="w-4 h-4 me-2" />
                 Manage Account
               </Link>
             </Button>
             <Button variant="ghost" className="flex-1" asChild>
               <Link to="/login">
-                <LogOut className="w-4 h-4 mr-2" />
+                <LogOut className="w-4 h-4 me-2" />
                 Log out
               </Link>
             </Button>

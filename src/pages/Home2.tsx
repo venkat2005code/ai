@@ -28,7 +28,7 @@ const Home2 = ({ isRTL, setIsRTL }) => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 shadow-lg">
-                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                  Get Started <ArrowRight className="ms-2 h-5 w-5" />
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8">
                   View Demo
@@ -145,7 +145,7 @@ const Home2 = ({ isRTL, setIsRTL }) => {
                   <p className="text-lg text-muted-foreground">{product.description}</p>
                   <Button variant="ghost" className="text-primary hover:text-primary/80 group p-0">
                     Learn More 
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="ms-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -289,14 +289,14 @@ const Home2 = ({ isRTL, setIsRTL }) => {
 
             <div className="space-y-4">
               <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 shadow-xl">
-                Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started Free <ArrowRight className="ms-2 h-5 w-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 backdrop-blur-sm"
               >
-                <Calendar className="mr-2 h-5 w-5" />
+                <Calendar className="me-2 h-5 w-5" />
                 Schedule a Demo
               </Button>
             </div>

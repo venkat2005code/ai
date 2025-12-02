@@ -49,7 +49,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-base sm:text-lg px-6 sm:px-8 py-6 shadow-lg transition-all hover:shadow-xl">
-                Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started Free <ArrowRight className="ms-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-base sm:text-lg px-6 sm:px-8 py-6 backdrop-blur-sm transition-all">
                 Watch Demo

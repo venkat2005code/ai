@@ -69,7 +69,7 @@ const ManageUsersTable = () => {
                     size="sm" 
                     className="bg-primary hover:bg-primary/90 text-white font-bold uppercase text-xs px-4 py-2 shadow-md"
                   >
-                    <Edit className="w-4 h-4 mr-2" strokeWidth={2.5} />
+                    <Edit className="w-4 h-4 me-2" strokeWidth={2.5} />
                     Edit
                   </Button>
                 </td>
