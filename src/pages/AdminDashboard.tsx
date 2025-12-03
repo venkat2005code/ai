@@ -18,7 +18,7 @@ const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-slate-50">
+    <div className="flex h-screen bg-secondary/20">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div
@@ -30,13 +30,15 @@ const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
       {/* Sidebar */}
       <AdminSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
-      {/* Main Content */}
-      <div className="flex-1 lg:ml-72">
+      {/* Main Content Area */}
+      <main className="flex-1 overflow-y-auto lg:ms-64">
         {/* Top Bar */}
-        <AdminTopBar onMenuClick={() => setSidebarOpen(true)} setIsRTL={setIsRTL} />
+        <header className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-30">
+          <AdminTopBar onMenuClick={() => setSidebarOpen(true)} setIsRTL={setIsRTL} />
+        </header>
 
         {/* Page Content */}
-        <main className="p-4 lg:p-8 space-y-6 lg:space-y-8">
+        <div className="p-4 lg:p-8 space-y-6">
           {/* Recent Activity */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,8 +92,8 @@ const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
           >
             <RecentProjectsTable />
           </motion.div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   );
 };

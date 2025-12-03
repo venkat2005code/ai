@@ -32,9 +32,9 @@ const RecentProjectsTable = () => {
       <div className="border-b-2 border-slate-200 px-7 py-5">
         <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Recent Projects</h2>
       </div>
-      
+
       <div className="overflow-x-auto">
-        <table className="w-full">
+        <table className="w-full min-w-[800px]">
           <thead>
             <tr className="bg-slate-900 border-b-2 border-slate-700">
               <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">ID</th>
@@ -46,7 +46,7 @@ const RecentProjectsTable = () => {
           </thead>
           <tbody className="divide-y-2 divide-slate-200">
             {projects.map((project) => (
-              <tr 
+              <tr
                 key={project.id}
                 className="hover:bg-slate-50 transition-colors duration-150"
               >
@@ -62,7 +62,7 @@ const RecentProjectsTable = () => {
                 <td className="px-7 py-6">
                   <div className="flex items-center gap-3">
                     <div className="flex-1 h-3 bg-slate-200 overflow-hidden max-w-[200px]">
-                      <div 
+                      <div
                         className={`h-full ${getProgressColor(project.progress)} transition-all duration-300`}
                         style={{ width: `${project.progress}%` }}
                       ></div>

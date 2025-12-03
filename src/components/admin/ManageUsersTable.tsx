@@ -28,9 +28,9 @@ const ManageUsersTable = () => {
       <div className="border-b-2 border-slate-200 px-7 py-5">
         <h2 className="text-xl font-black text-slate-900 uppercase tracking-tight">Manage Users</h2>
       </div>
-      
+
       <div className="overflow-x-auto">
-        <table className="w-full">
+        <table className="w-full min-w-[800px]">
           <thead>
             <tr className="bg-slate-900 border-b-2 border-slate-700">
               <th className="px-7 py-4 text-start text-xs font-black text-white uppercase tracking-wider">ID</th>
@@ -43,7 +43,7 @@ const ManageUsersTable = () => {
           </thead>
           <tbody className="divide-y-2 divide-slate-200">
             {users.map((user) => (
-              <tr 
+              <tr
                 key={user.id}
                 className="hover:bg-slate-50 transition-colors duration-150"
               >
@@ -65,8 +65,8 @@ const ManageUsersTable = () => {
                   </span>
                 </td>
                 <td className="px-7 py-5">
-                  <Button 
-                    size="sm" 
+                  <Button
+                    size="sm"
                     className="bg-primary hover:bg-primary/90 text-white font-bold uppercase text-xs px-4 py-2 shadow-md"
                   >
                     <Edit className="w-4 h-4 me-2" strokeWidth={2.5} />
