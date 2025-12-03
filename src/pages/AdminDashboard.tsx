@@ -21,7 +21,7 @@ const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
     <div className="flex min-h-screen bg-slate-50">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -31,7 +31,7 @@ const AdminDashboard = ({ isRTL, setIsRTL }: AdminDashboardProps) => {
       <AdminSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Main Content */}
-      <div className="flex-1 lg:ms-72">
+      <div className="flex-1 lg:ml-72">
         {/* Top Bar */}
         <AdminTopBar onMenuClick={() => setSidebarOpen(true)} setIsRTL={setIsRTL} />
 

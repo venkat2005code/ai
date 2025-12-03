@@ -4,6 +4,7 @@
 
 body.ltr {
   direction: ltr;
+  text-align: left;
 }
 body.rtl {
   direction: rtl;
