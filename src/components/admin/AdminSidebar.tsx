@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { 
-  LayoutDashboard, 
-  Users, 
-  Cpu, 
-  BarChart2, 
-  FileText, 
-  Bell, 
-  ClipboardList, 
+import {
+  LayoutDashboard,
+  Users,
+  Cpu,
+  BarChart2,
+  FileText,
+  Bell,
+  ClipboardList,
   Settings,
   X
 } from "lucide-react";
@@ -32,9 +32,8 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
   ];
 
   return (
-    <aside className={`w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 fixed inset-y-0 start-0 border-e border-slate-700/50 shadow-2xl z-50 transition-transform duration-300 flex flex-col ${
-      isOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
-    } lg:translate-x-0`}>
+    <aside className={`w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 fixed inset-y-0 start-0 border-e border-slate-700/50 shadow-2xl z-50 transition-transform duration-300 flex flex-col lg:translate-x-0 ${isOpen ? 'translate-x-0' : 'max-lg:ltr:-translate-x-full max-lg:rtl:translate-x-full'
+      }`}>
       {/* Logo Section */}
       <div className="h-20 flex items-center justify-between px-6 border-b border-slate-700/50">
         <div className="flex items-center gap-3">
@@ -75,11 +74,10 @@ const AdminSidebar = ({ isOpen, onClose }: AdminSidebarProps) => {
           <button
             key={item.id}
             onClick={() => setActiveItem(item.id)}
-            className={`w-full flex items-center text-start gap-4 px-5 py-3.5 rounded-lg transition-all duration-200 ${
-              activeItem === item.id
-                ? "bg-primary text-white shadow-lg shadow-primary/20"
-                : "text-slate-300 hover:text-white hover:bg-slate-800/50"
-            }`}
+            className={`w-full flex items-center text-start gap-4 px-5 py-3.5 rounded-lg transition-all duration-200 ${activeItem === item.id
+              ? "bg-primary text-white shadow-lg shadow-primary/20"
+              : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+              }`}
           >
             <item.icon className="w-5 h-5 flex-shrink-0" strokeWidth={2.5} />
             <span className="text-sm font-bold tracking-wide uppercase">{item.label}</span>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
+import {
   LayoutDashboard,
   User,
   Wrench,
@@ -97,16 +97,15 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
     <div className="flex h-screen bg-secondary/20">
       {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
 
       {/* Left Sidebar */}
-      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed inset-y-0 start-0 z-50 transition-transform duration-300 ${
-        sidebarOpen ? 'translate-x-0' : 'ltr:-translate-x-full rtl:translate-x-full'
-      } lg:translate-x-0`}>
+      <aside className={`w-64 bg-gradient-to-b from-slate-900 to-slate-800 text-white flex flex-col fixed inset-y-0 start-0 z-50 transition-transform duration-300 lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : 'max-lg:ltr:-translate-x-full max-lg:rtl:translate-x-full'
+        }`}>
         {/* Logo Area */}
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center justify-between gap-3">
@@ -146,11 +145,10 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
             <button
               key={item.id}
               onClick={() => setActivePage(item.id)}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
-                activePage === item.id
-                  ? "bg-primary text-white shadow-lg"
-                  : "text-white/70 hover:bg-white/10 hover:text-white"
-              }`}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${activePage === item.id
+                ? "bg-primary text-white shadow-lg"
+                : "text-white/70 hover:bg-white/10 hover:text-white"
+                }`}
             >
               <item.icon className="w-5 h-5" />
               <span className="text-sm font-medium">{item.label}</span>
@@ -181,12 +179,12 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
               </Button>
               <h1 className="text-xl lg:text-2xl font-bold text-foreground">User Dashboard</h1>
             </div>
-            
+
             <div className="flex items-center gap-2 lg:gap-4">
               {/* Language/RTL Toggle */}
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 className="rounded-lg"
                 onClick={() => setIsRTL((v) => !v)}
                 aria-label="Toggle layout direction"
@@ -279,7 +277,7 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                           {item.value} / {item.max}
                         </span>
                         <div className="w-20 h-1.5 bg-secondary rounded-full overflow-hidden">
-                          <div 
+                          <div
                             className="h-full bg-gradient-to-r from-primary to-highlight rounded-full"
                             style={{ width: `${(parseInt(item.value) / parseInt(item.max)) * 100}%` }}
                           />
@@ -352,23 +350,20 @@ const UserDashboard = ({ isRTL, setIsRTL }) => {
                   <div className="divide-y divide-border">
                     {recentItems.map((item, index) => (
                       <div key={index} className="p-4 hover:bg-secondary/30 transition-colors flex items-start gap-4">
-                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                          item.status === 'success' ? 'bg-green-500/10' : 'bg-blue-500/10'
-                        }`}>
-                          <item.icon className={`w-5 h-5 ${
-                            item.status === 'success' ? 'text-green-600' : 'text-blue-600'
-                          }`} />
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${item.status === 'success' ? 'bg-green-500/10' : 'bg-blue-500/10'
+                          }`}>
+                          <item.icon className={`w-5 h-5 ${item.status === 'success' ? 'text-green-600' : 'text-blue-600'
+                            }`} />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-4 mb-1">
                             <h4 className="text-sm font-semibold text-foreground">{item.title}</h4>
-                            <Badge 
-                              variant="outline" 
-                              className={`text-xs whitespace-nowrap ${
-                                item.status === 'success' 
-                                  ? 'border-green-500/30 text-green-600 bg-green-500/5' 
-                                  : 'border-blue-500/30 text-blue-600 bg-blue-500/5'
-                              }`}
+                            <Badge
+                              variant="outline"
+                              className={`text-xs whitespace-nowrap ${item.status === 'success'
+                                ? 'border-green-500/30 text-green-600 bg-green-500/5'
+                                : 'border-blue-500/30 text-blue-600 bg-blue-500/5'
+                                }`}
                             >
                               {item.status}
                             </Badge>
